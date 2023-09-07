@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steak Fresh Recipes</title>
+    <link rel="stylesheet" href="{% static 'recipes_app/css/style_add.css' %}" />
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="{% url 'home' %}">
+                <img id="home" src="{% static 'recipes_app/img/logo.png' %}" alt="Steak Fresh Recipes" title="Home" />
+            </a>
+        </div>
+        <div id="quote">"Professors never eat boiled beef, out of respect for their principles and
+        because they know the incontestable truth that boiled beef is flesh
+        without its juice"
+        <p style="text-align:end">Jean Anthelme Brillat-Savarin</p>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left_content"></div>
+        <div id="center_content">
+            <form method='POST'>
+                {% csrf_token %}
+                <h1>Add your special steak recipe here</h1><hr>
+                <p>Write a title of your recipe</p>
+                <span>Note: the field shouldn`t be empty or contain special symbols</span>
+                <div>
+                    {{ new_form.title }}
+                </div>
+                <p>Add ingredients</p>
+                <span>Note: the field shouldn`t be empty or contain special symbols.</span> 
+                <span>For example: 2 sirloin steaks, sunflower, rapeseed or groundnut oil, 40g unsalted butter etc.</span>
+                <div>
+                    {{ new_form.content }}
+                </div>
+                <p>Add your recipe</p>
+                <span>Note: the field shouldn`t be empty or contain special symbols.</span>
+                <div>
+                    {{ new_form.recipe }}
+                </div>
+                <button type="submit">Add recipe</button>
+            </form>
+        </div>
+        <div id="right_content"></div>
+    </div>
+    <div id="footer">
+        <p>Powered by Django</p>
+    </div>
+    
+</body>
+</html>

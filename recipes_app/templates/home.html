@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steak Fresh Recipes</title>
+    <link rel="stylesheet" href="{% static 'recipes_app/css/style_home.css' %}" />
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="{% url 'home' %}">
+                <img id="home" src="{% static 'recipes_app/img/logo.png' %}" alt="Steak Fresh Recipes" title="Home" />
+            </a>
+        </div>
+        <div id="quote">"Professors never eat boiled beef, out of respect for their principles and
+        because they know the incontestable truth that boiled beef is flesh
+        without its juice"
+        <p style="text-align:end">Jean Anthelme Brillat-Savarin</p>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="view_button">
+            <a href="{% url 'posts' %}">
+                <img id="menu_1" src="{% static 'recipes_app/img/all_posts.jpeg' %}" alt="View all recipes" title="View all recipes" /><br><br>
+                View all recipes for cooking<br>
+            </a>
+        </div>
+        <div id="add_button">
+            <a href="{% url 'add_post' %}">
+                <img id="menu_2" src="{% static 'recipes_app/img/add_post.jpeg' %}" alt="Add recipe" title="Add recipe" /><br><br>
+                Add your special steak recipe here
+            </a>
+        </div>
+        <div id="about_button">
+            <a href="{% url 'about' %}">
+                <img id="menu_3" src="{% static 'recipes_app/img/about_us.jpeg' %}" alt="About us" title="About us" /><br><br>
+                About us and our contacts<br>
+            </a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left_content"></div>
+        <div id="center_content"></div>
+        <div id="right_content"></div>
+    </div>
+    <div id="footer">
+        <p>Powered by Django</p>
+    </div>
+    
+</body>
+</html>

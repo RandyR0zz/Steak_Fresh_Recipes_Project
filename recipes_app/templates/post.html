@@ -1,0 +1,23 @@
+{% extends 'base.html '%}
+{% load split_tag %}
+
+{% block content %}
+    <div id="center_content">
+        {% if post %}
+            {% if post.moderation %}
+                <h1>{{ post.title }}</h1><hr><br>
+                <p id="ingr">Content:
+                {% with post.content|split:',' as ingr %} 
+                    {% for ingredient in ingr %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                {% endwith %}
+                </p><br>
+                <p id='ingr'>How to cook:<br><br> 
+                    <p>{{ post.recipe }}</p>
+                </p><br>
+                <span>Recipe added by {{ post.author.username }} in {{ post.issued }}</span>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

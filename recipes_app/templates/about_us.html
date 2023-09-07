@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steak Fresh Recipes</title>
+    <link rel="stylesheet" href="{% static 'recipes_app/css/style_about.css' %}" />
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="{% url 'home' %}">
+                <img id="home" src="{% static 'recipes_app/img/logo.png' %}" alt="Steak Fresh Recipes" title="Home" />
+            </a>
+        </div>
+        <div id="quote">"Professors never eat boiled beef, out of respect for their principles and
+        because they know the incontestable truth that boiled beef is flesh
+        without its juice"
+        <p style="text-align:end">Jean Anthelme Brillat-Savarin</p>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left_content"></div>
+        <div id="center_content">
+            <h1>Our history:</h1><hr>
+                <p>
+                    The project was created as a project work for learning a programming language. It contains several recipes 
+                    for cooking steaks. The user can add his recipe. We hope you will enjoy this product. 
+                </p>   
+            <h1>Our purpose:</h1><hr>
+                <p>
+                    To teach the whole world how to cook steaks
+                </p>
+            <h1>Our contacts:</h1><hr>
+                <p>
+                    212000, Mogilev, World street, 14,<br>
+                    Republic of Belarus<br>
+                    Tel: +375 222 777 777<br>
+                    e-mail: freshsteak@steak.io
+                </p>
+        </div>
+        <div id="right_content"></div>
+    </div>
+    <div id="footer">
+        <p>Powered by Django</p>
+    </div>
+    
+</body>
+</html>

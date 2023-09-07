@@ -1,0 +1,27 @@
+{% extends 'base.html '%}
+{% load split_tag %}
+
+{% block content %}
+    <div id="center_content">
+        {% for post in posts %}
+            {% if post.moderation %}
+                <a href="{% url 'post' post.id %}">
+                    <h1>{{ post.title }}</h1><hr><br>
+                </a>
+                <p id="ingr">Content:
+                    {% with post.content|split:',' as ingr %} 
+                        {% for ingredient in ingr %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    {% endwith %}
+                </p><br>
+                <p id="ingr">How to cook:
+                    {% with post.recipe|split:'.' as ingr %}
+                        <p>{{ ingr.0 }}.{{ ingr.1 }}...</p>
+                    {% endwith %}
+                </p><br>
+            {% endif %}
+        {% endfor %}
+        {% include "pagination.html" with page=posts %}   
+    </div> 
+{% endblock %}
