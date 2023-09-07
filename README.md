@@ -1,6 +1,6 @@
 # Steak Fresh Recipe Project
 
-The project is a basic website was created by Django Framework and was developed for the end of courses at the IT-Academy. The functionality of the site is based on the logic of adding recipes of steaks by the user with the possibility of moderating recipes by the administrator.
+The Project is a basic website was created by Django Framework and was developed for the end of courses at the IT-Academy. The functionality of the site is based on the logic of adding recipes of steaks by the user with the possibility of moderating recipes by the administrator.
 
 Was implemented:
 <ul type='square'>
