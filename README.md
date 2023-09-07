@@ -1,11 +1,11 @@
-# IT Bootcamp Project
-## Test task for internship in the IT Academy project named IT Bootcamp
+# Steak Fresh Recipe Project
 
-The Project was created by Django Framework as a basic website with the ability to add and read some data.
+The project is a basic website was created by Django Framework and was developed for the end of courses at the IT-Academy. The functionality of the site is based on the logic of adding recipes of steaks by the user with the possibility of moderating recipes by the administrator.
 
 Was implemented:
 <ul type='square'>
-  <li>functionality for creating/retrieving data between the entities of the Author and the Book by using the M2M relation</li>
+  <li>functionality for creating/retrieving data from the Post entity using relation with Author</li>
+  <li>some templates and css files for the decoration</li>
   <li>several model tests</li>
   <li>CI/CD pipeline by using GitHub Actions</li>
 </ul>
